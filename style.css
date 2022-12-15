@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+/*     font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif; */
+
+:root {
+  --BrightOrange: hsl(31, 77%, 52%);
+  --DarkCyan: hsl(184, 100%, 22%);
+  --VeryDarkCyan: hsl(179, 100%, 13%);
+
+  --TransparentWwhite: hsla(0, 0%, 100%, 0.75); /* (paragraphs)*/
+  --VeryLightGray: hsl(0, 0%, 95%); /* (background, headings, buttons)*/
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  background-color: var(--VeryLightGray);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+}
+
+.grid-card {
+  color: var(--TransparentWwhite);
+  height: 500px;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.grid-card.sedan {
+  background-color: var(--BrightOrange);
+}
+
+.grid-card.sedan button {
+  border: 1px solid var(--VeryLightGray);
+  color: var(--BrightOrange);
+}
+
+.grid-card.sedan button:hover,
+.grid-card.suv button:hover,
+.grid-card.luxury button:hover {
+  color: var(--VeryLightGray);
+}
+
+.grid-card.suv {
+  background-color: var(--DarkCyan);
+}
+
+.grid-card.suv button {
+  border: 1px solid var(--VeryLightGray);
+  color: var(--DarkCyan);
+}
+
+.grid-card.luxury {
+  background-color: var(--VeryDarkCyan);
+}
+
+.grid-card.luxury button {
+  border: 1px solid var(--VeryLightGray);
+  color: var(--VeryDarkCyan);
+}
+
+.grid-card .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-card .text h1 {
+  color: var(--VeryLightGray);
+  text-transform: uppercase;
+  font-size: 42px;
+  font-family: "Big Shoulders Display", cursive;
+  margin-bottom: 50px;
+}
+
+.grid-card .text p {
+  line-height: 1.7;
+}
+
+button {
+  padding: 15px 0;
+  border-radius: 25px;
+  border: 1 px solid var(--VeryLightGray);
+  width: 150px;
+  cursor: pointer;
+  background-color: var(--VeryLightGray);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  transition: all 0.1s ease-in-out;
+}
+
+button:hover {
+  background-color: transparent;
+}
+
+@media (max-width: 1100px) {
+  body {
+    height: auto;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .grid-card {
+    height: 420px;
+    padding: 20px 50px;
+  }
+}
